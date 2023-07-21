@@ -53,8 +53,7 @@ setInterval(async function () {
   let orientationn = Transforms.headingPitchRollQuaternion(position, hpRoll);
   airplaneEntity.orientation = orientationn;
   airplaneEntity.position = position;
-  console.log(`lat: ${latn}, lon: ${lonn}`);
-}, 1000);
+}, 500);
 
 async function getPositionNow() {
   const responce = await fetch("http://api.open-notify.org/iss-now.json");
